@@ -1,3 +1,5 @@
+package com.sample.simpleApp;
+
 package com.example.helloworld;
 
 import org.springframework.boot.SpringApplication;
