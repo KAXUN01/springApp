@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven3'
+        jdk 'Java17'
+    }
+    stages {
+        stage('clean workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/KAXUN01/springApp'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
