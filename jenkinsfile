@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Checkout') {
             steps {
-                git 'https://github.com/KAXUN01/springApp'
+                git branch:'main', url:'https://github.com/KAXUN01/springApp'
             }
         }
     }
